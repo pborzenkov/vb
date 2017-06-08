@@ -52,9 +52,16 @@ func main() {
 	})
 
 	w := tabwriter.NewWriter(os.Stdout, 0, 8, 0, '\t', 0)
-	fmt.Fprint(w, "ADDRESS\tFREE BIKES\tFREE PLACES\n")
+	fmt.Fprint(w, "ADDRESS\tFREE BIKES\tFREE PLACES\tIN SERVICE\n")
 	for _, f := range favs {
-		fmt.Fprintf(w, "%s\t%d\t%d\n", *f.Address, *f.TotalPlaces-*f.FreePlaces, *f.FreePlaces)
+		fmt.Fprintf(w, "%s\t%d\t%d\t", *f.Address, *f.TotalPlaces-*f.FreePlaces, *f.FreePlaces)
+		if f.IsLocked == nil {
+			fmt.Fprintf(w, "?\n")
+		} else if *f.IsLocked == true {
+			fmt.Fprintf(w, "✘\n")
+		} else {
+			fmt.Fprintf(w, "✔\n")
+		}
 	}
 	w.Flush()
 }
