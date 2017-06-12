@@ -10,14 +10,14 @@
 [[projects]]
   name = "github.com/rumyantseva/go-velobike"
   packages = ["velobike"]
-  revision = "787229f2ab6a93268175ac45e6fa6e94e1d464c1"
-  version = "0.1.2"
+  revision = "942a68f19e5b89f2db38b0d611f0130c115b4ba3"
+  version = "0.2.0"
 
 [[projects]]
   branch = "master"
   name = "github.com/spf13/cobra"
   packages = ["."]
-  revision = "d7cfb134748502f60bc1797cd26fcc3e4eb4b927"
+  revision = "b4dbd37a01839e0653eec12aa4bbb2a2ce7b2a37"
 
 [[projects]]
   branch = "master"
@@ -28,6 +28,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "a1e795a44a5e6f9eb45d635ed843dc26897f6f33da05401d1a909d8289737538"
+  inputs-digest = "5e5030c6dafa3f3f5de94662d145a01a93fd7aaabde3f95b4505d704fa3114d1"
   solver-name = "gps-cdcl"
   solver-version = 1
