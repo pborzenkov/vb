@@ -56,6 +56,7 @@ func stats(cmd *cobra.Command, args []string) {
 			}
 
 			rides++
+			payment += *h.Price
 			distance += float64(*h.Distance) / 1000
 			d, err := parseDuration(*h.Duration)
 			if err != nil {
