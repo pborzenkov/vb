@@ -11,6 +11,7 @@ Usage:
 Available Commands:
   favourite   List favourite parking spots
   help        Help about any command
+  stats       Display velobike.ru usage statistics
 
 Use "vb [command] --help" for more information about a command.
 ```
